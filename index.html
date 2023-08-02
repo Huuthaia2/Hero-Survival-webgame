@@ -93,19 +93,19 @@ if (progressBar)
 	}
 	
 	loadScript(debug ? 'cocos2d-js.js' : 'cocos2d-js-min.js', function () {
-        minigame.initializeAsync()
-        .then(function () {
-            // 记录启动来源
-            minigame.getEntryPointAsync().then(function(entry){
-                console.info("Entry Point: ", entry);
-            });
+        // minigame.initializeAsync()
+        // .then(function () {
+        //     // 记录启动来源
+        //     minigame.getEntryPointAsync().then(function(entry){
+        //         console.info("Entry Point: ", entry);
+        //     });
 
-            // 记录会话类型
-            const contextType = minigame.context.getType();
-            console.info("Context Type: ", contextType);
+        //     // 记录会话类型
+        //     const contextType = minigame.context.getType();
+        //     console.info("Context Type: ", contextType);
 
-            window.boot();
-        });
+        //     window.boot();
+        // });
    
     });
 	
