@@ -43,7 +43,7 @@
   <link rel="stylesheet" type="text/css" href="style-mobile.css"/>
   <link rel="icon" href="favicon.ico"/>
   
-  <script src="../sdk.minigame.vip/js/1.1/minigamedabd.js?t=1690269757"></script>
+  <script src="sdk.minigame.vip/js/1.1/minigamedabd.js?t=1690269757"></script>
   
 </head>
 <body>
@@ -94,18 +94,19 @@ if (progressBar)
 	
 	loadScript(debug ? 'cocos2d-js.js' : 'cocos2d-js-min.js', function () {
         minigame.initializeAsync()
-        .then(function () {
-            // 记录启动来源
-            minigame.getEntryPointAsync().then(function(entry){
-                console.info("Entry Point: ", entry);
-            });
+        window.boot();
+        // .then(function () {
+        //     // 记录启动来源
+        //     minigame.getEntryPointAsync().then(function(entry){
+        //         console.info("Entry Point: ", entry);
+        //     });
 
-            // 记录会话类型
-            const contextType = minigame.context.getType();
-            console.info("Context Type: ", contextType);
+        //     // 记录会话类型
+        //     const contextType = minigame.context.getType();
+        //     console.info("Context Type: ", contextType);
 
-            window.boot();
-        });
+        //     window.boot();
+        // });
    
     });
 	
