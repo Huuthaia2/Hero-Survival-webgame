@@ -426,8 +426,13 @@
             
             //AndroidFunction.showToast(toast)
             console.log("zzz showInterstitialAd")
-            makeHTTPRequest("POST","url","data")
-            //AndroidFunction.showToast(toast)
+            //makeHTTPRequest("POST","url","data")
+			try{
+				AndroidFunction.showAds("InterAds")
+
+			}catch(e){
+				console.log("callback Inter error");
+			}
 			return c(this, void 0, void 0, function*() {
 				return yield this._showAsync(n.INTERSTITIAL)
 			})
@@ -437,9 +442,13 @@
 		}
 		static showRewardedVideo() {
             console.log("zzz showRewardedVideo")
-            makeHTTPRequest("POST","url","data")
+            //makeHTTPRequest("POST","url","data")
+			try{
+				AndroidFunction.showAds("Reward")
 
-            //AndroidFunction.showToast(toast)
+			}catch(e){
+				console.log("callback Reward error");
+			}
 			return c(this, void 0, void 0, function*() {
 				return yield this._showAsync(n.REWARDED_VIDEO)
 			})
